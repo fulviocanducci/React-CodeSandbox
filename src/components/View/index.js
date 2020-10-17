@@ -1,8 +1,8 @@
 import React from "react";
-import { useStateContextCounter } from "../../contexts/Counter";
+import { useStateContextCounterValue } from "../../contexts/Counter";
 
 const View = () => {
-  const [value] = useStateContextCounter();
+  const [value] = useStateContextCounterValue();
   return <h1>{value}</h1>;
 };
 

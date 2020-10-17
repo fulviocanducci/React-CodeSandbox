@@ -1,8 +1,8 @@
 import React from "react";
-import { useStateContextCounter } from "../../contexts/Counter";
+import { useStateContextCounterHandle } from "../../contexts/Counter";
 
 const Operation = () => {
-  const [value, handleIncrement, handleDecrement] = useStateContextCounter();
+  const [handleIncrement, handleDecrement] = useStateContextCounterHandle();
   return (
     <div>
       <button onClick={handleIncrement}>Increment</button>

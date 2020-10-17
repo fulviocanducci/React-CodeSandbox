@@ -11,10 +11,16 @@ export default function CounterProvider({ children }) {
   );
 }
 
-export const useStateContextCounter = () => {
+export const useStateContextCounterHandle = () => {
   const context = React.useContext(CounterContext);
-  const { value, setValue } = context;
+  const { setValue } = context;
   const handleIncrement = () => setValue((state) => state + 1);
   const handleDecrement = () => setValue((state) => state - 1);
-  return [value, handleIncrement, handleDecrement];
+  return [handleIncrement, handleDecrement];
+};
+
+export const useStateContextCounterValue = () => {
+  const context = React.useContext(CounterContext);
+  const { value } = context;
+  return [value];
 };
