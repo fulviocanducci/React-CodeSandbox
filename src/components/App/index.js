@@ -8,6 +8,7 @@ export default function App() {
     <div className="App">
       <View />
       <Operation />
+      <View />
     </div>
   );
 }
